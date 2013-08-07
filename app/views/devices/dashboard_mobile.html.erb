@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RGraph: HTML5 canvas graph library - a basic example</title>
+  <script src="libraries/RGraph.common.core.js" ></script>
+  <script src="libraries/RGraph.bar.js" ></script>
+</head>
+<body>
+<div style="position: absolute; left: 0px; top: 0px; overflow: hidden; width: 100%; height: 100%; z-index: 0;">
+  <h1>Pedometer</h1>
+  <h2>Mobile steps Counter</h2>
+  <!-- This is the canvas that the graph is drawn on -->
+  <canvas id="myBar" width="400" height="250">[No canvas support]</canvas>
+
+  <!--This creates and displays the graph.
+We can call this from the window.onload event,
+allowing you to put it in your pages header. -->
+  <script>
+      window.onload = function ()
+      {
+          var bar = new RGraph.Bar('myBar', [120,130,160,150,160,190,190,120,230,160,130,240]);
+          bar.Set('chart.colors', ['red']);
+          bar.Set('chart.title', 'A basic graph (big, but basic)');
+          bar.Set('chart.labels', ['Jan', 'Feb', 'Mar', 'Apr', 'May',
+              'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']);
+          bar.Draw();
+      }
+  </script>
+  <p>
+  <div style="width:400px">
+    <h5>Key points</h5>
+    Using a pedometer or step counter is an easy and fun way to track how active you are. It adds up all the steps you take during the day.
+    Using a pedometer can remind you to walk more. A quick check may show that you need more steps for the day.
+    Using a pedometer can help you set goals to take more steps in a day. You may need to find creative ways to add more steps, but walking more will help you get more exercise, feel better, and stay healthy.
+
+  </div>
+  </p>
+</div>
+</body>
+</html>

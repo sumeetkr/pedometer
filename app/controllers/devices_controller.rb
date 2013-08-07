@@ -82,11 +82,14 @@ class DevicesController < ApplicationController
   end
 
   def dashboard
-    @device = Device.find(params[:id])
+    #@device = Device.find(params[:id])
 
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @device }
-    end
+    render :dashboard
+  end
+
+  def dashboard_mobile
+    #@device = Device.find(params[:id])
+
+    render :dashboard_mobile
   end
 end

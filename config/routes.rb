@@ -1,5 +1,6 @@
 Pedometer::Application.routes.draw do
   get "devices/dashboard"
+  get "devices/dashboard_mobile"
   resources :devices
 
   # The priority is based upon order of creation:
